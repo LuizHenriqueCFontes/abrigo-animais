@@ -1,0 +1,18 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.301);
+}
+
+.button{
+    background-color: transparent;
+    border: none;
+}
+
+.icon{
+    color: var(--supporting-color);
+    font-size: 1.6em;
+    padding-right: 10px;
+}
