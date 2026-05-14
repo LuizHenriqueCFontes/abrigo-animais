@@ -1,12 +1,15 @@
+import styles from "./Input.module.css";
+
 interface InputProps{
     id: string,
     value: string,
     onChange: (value: string) => void,
     placeholder?: string,
     type?: string,
-    required?: boolean
-    label?: string
-    icon?: React.ReactNode
+    required?: boolean,
+    label?: string,
+    icon?: React.ReactNode,
+    variant: "hero"
 
 }
 
@@ -15,7 +18,7 @@ export default function Input(props: InputProps){
         <div>
             {props.label && <label htmlFor={props.id}>{props.label}</label>}
 
-            {props.icon && <span>{props.icon}</span>}
+            {props.icon && <span className={styles.icon}>{props.icon}</span>}
 
             <input
                 id={props.id}
@@ -23,6 +26,8 @@ export default function Input(props: InputProps){
                 value={props.value}
                 onChange={(e) => props.onChange(e.target.value)}
                 required={props.required}
+                className={styles[props.variant]}
+                placeholder={props.placeholder}
             />
         </div>
     );
