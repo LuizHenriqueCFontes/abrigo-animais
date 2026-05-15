@@ -1,13 +1,13 @@
 .hero{
     border: none;
-    width: 100%;
+    width: 50%;
     border-radius: 8px;
     height: 45px;
     outline: none;
     position: absolute;
 }
 
-.hero:hover{
+.hero:focus-within{
     box-shadow: 0 0 3px var(--primary-color);
     border-color: var(--primary-color);
 }

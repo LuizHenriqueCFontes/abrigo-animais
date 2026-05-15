@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import Input from "../components/Input/Input";
 import { useState } from "react";
+import Hero from "../components/Hero/Hero";
 
 export default function AppRoutes(){
 
@@ -11,6 +12,7 @@ export default function AppRoutes(){
         <Routes>
             <Route element={<MainLayout />}>
                 <Route path="/teste" element={<Input id="10" value={value} onChange={setValue} variant="hero" placeholder="Pesquisar por Cidade ou Abrigo" />}/>
+                <Route path="/hero" element={<Hero />}/>
 
             </Route>
 
