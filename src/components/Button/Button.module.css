@@ -1,0 +1,9 @@
+.primary{
+    width: 50%;
+    background-color: var(--primary-color);
+    color: var(--contrast-primary);
+    border: none;
+    height: 45px;
+    border-radius: 8px;
+    display: block;
+}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import dog from "../../assets/hero/dog-hero.png";
 import Input from "../Input/Input";
+import Button from "../Button/Button";
 
 export default function Hero(){
     const [find, setFind] = useState("");
@@ -15,7 +16,9 @@ export default function Hero(){
             </section>
 
             <section>
-                <Input id="find" value={find} onChange={setFind} placeholder="Pesquisar por Cidade ou Abrigo" variant="hero"/>
+                <Input ariaLabel="Pesquisar abrigo ou cidade" id="find" value={find} onChange={setFind} placeholder="Pesquisar por Cidade ou Abrigo" variant="hero"/>
+
+                <Button variant="primary">Encontrar Amigo</Button>
             </section>
         </article>
 
