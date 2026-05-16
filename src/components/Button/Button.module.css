@@ -1,0 +1,10 @@
+.primary{
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--contrast-primary);
+    font-weight: bold;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
