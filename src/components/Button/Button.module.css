@@ -1,9 +1,10 @@
 .primary{
-    width: 50%;
+    width: 100%;
     background-color: var(--primary-color);
     color: var(--contrast-primary);
+    font-weight: bold;
     border: none;
-    height: 45px;
+    padding: 15px;
     border-radius: 8px;
-    display: block;
+    cursor: pointer;
 }

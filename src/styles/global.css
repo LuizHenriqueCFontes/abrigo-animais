@@ -2,12 +2,13 @@
     --background-page: #e6e1e1;
     --primary-color: #F05A28;
     --contrast-primary: #FFFFFF;
-    --supporting-color: #78909C;
+    --supporting-color: #7a7d7e;
 }
 
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 html, body{
