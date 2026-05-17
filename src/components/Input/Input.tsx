@@ -28,7 +28,7 @@ export default function Input(props: InputProps){
                 value={props.value}
                 onChange={(e) => props.onChange(e.target.value)}
                 required={props.required}
-                className={`${styles[props.variant]} ${props.className ??""}`}
+                className={`${styles[props.variant]} ${props.className ?? ""}`}
                 placeholder={props.placeholder}
                 aria-label={props.ariaLabel}
             />
