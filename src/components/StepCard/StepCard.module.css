@@ -1,0 +1,26 @@
+.cardContainer{
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.iconArea{
+    margin: 20px 0;
+    text-align: center;
+}
+
+.title{
+    margin-bottom: 10px;
+}
+
+.description{
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: var(--supporting-color);
+    font-weight: bold;
+}
