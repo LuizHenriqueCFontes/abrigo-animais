@@ -1,6 +1,7 @@
 import { Heart, Search, Smile } from "lucide-react";
 import StepCard from "../StepCard/StepCard";
 import styles from "./HowItWorks.module.css";
+import Button from "../Button/Button";
 
 const stepsData = [
     {
@@ -39,6 +40,10 @@ export default function HowItWorks(){
                         description={step.description}
                     />
                 ))}
+            </div>
+
+            <div>
+                <Button className={styles.findPet} variant="primary">Encontrar meu pet ideal!</Button>
             </div>
         </section>
     );

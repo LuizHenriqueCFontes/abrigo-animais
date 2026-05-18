@@ -13,3 +13,11 @@
 .cardContainer{
     padding: var(--padding-page);
 }
+
+.findPet{
+    width: 80%;
+    display: block;
+    margin: auto;
+    font-size: 1em;
+    font-weight: bold;
+}
