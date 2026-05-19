@@ -1,26 +1,31 @@
 import Button from "../Button/Button";
+import styles from "./PetCard.module.css";
 
 interface PetCardProps{
     photo: string,
     title: string,
     details: string,
-    personality: string
+    personality: string[]
 }
 
 export default function PetCard(props: PetCardProps){
     return(
-        <article>
-            <div>
-                <img src={props.photo} alt={`Imagem do ${props.title}`} />
+        <article className={styles.cardContainer}>
+            <div className={styles.photo}>
+                <img className={styles.photo} src={props.photo} alt={`Imagem do ${props.title}`} />
             </div>
 
-            <div>
-                {props.title}
-                {props.details}
-                {props.personality}
+            <div className={`${styles.containerInformation} ${styles.space}`}>
+                <h2>{props.title}</h2>
+
+                <p className={styles.details}>{props.details}</p>
             </div>
 
-            <div>
+            <div >
+                <span className={styles.cardPersonality}>{props.personality}</span>
+            </div>
+
+            <div className={styles.space}>
                 <Button variant="primary">
                     Quero adotar
                 </Button>

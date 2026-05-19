@@ -1,0 +1,39 @@
+:root{
+    --backgroud-tag-personality: #EDF2EE;
+    --text-color-tag-personality: #4A6B53;
+}
+
+.cardContainer{
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.photo{
+    width: 100%;
+    object-fit: cover;
+}
+
+.containerInformation{
+    display: flex;
+    flex-direction: column;
+}
+
+.details{
+    color: var(--supporting-color);
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.cardPersonality{
+    background-color: var(--backgroud-tag-personality);
+    color: var(--text-color-tag-personality);
+    gap: 8px;
+    padding: 10px;
+}
+
+.space{
+    padding: 0 20px 15px;
+}
