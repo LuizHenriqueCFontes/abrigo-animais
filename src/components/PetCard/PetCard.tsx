@@ -1,4 +1,5 @@
 import Button from "../Button/Button";
+import TagPersonality from "../TagPersonality/TagPersonality";
 import styles from "./PetCard.module.css";
 
 interface PetCardProps{
@@ -21,11 +22,7 @@ export default function PetCard(props: PetCardProps){
                 <p className={styles.details}>{props.details}</p>
             </div>
 
-            <div className={styles.containerPersonality}>
-                {props.personality.map((cardPersonality) => (
-                    <span className={styles.cardPersonality} key={cardPersonality}>{cardPersonality}</span>
-                ))}
-            </div>
+            <TagPersonality personality={props.personality}/>
 
             <div className={styles.space}>
                 <Button variant="primary">
