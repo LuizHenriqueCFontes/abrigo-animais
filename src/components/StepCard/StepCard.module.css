@@ -1,12 +1,12 @@
 .cardContainer{
     background-color: #FFFFFF;
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     width: 100%;
     text-align: center;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .iconArea{

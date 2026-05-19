@@ -10,7 +10,7 @@ interface StepCardProps{
 
 export default function StepCard(props: StepCardProps){
     return(
-        <div className={styles.cardContainer}>
+        <article className={styles.cardContainer}>
             <div className={styles.iconArea}>
                 <IconBox variant="primary" icon={props.icon}/>
             </div>
@@ -19,7 +19,6 @@ export default function StepCard(props: StepCardProps){
                 <h2 className={styles.title}>{props.title}</h2>
                 <p className={styles.description}>{props.description}</p>
             </div>
-
-        </div>
+        </article>
     );
 }
