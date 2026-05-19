@@ -21,8 +21,10 @@ export default function PetCard(props: PetCardProps){
                 <p className={styles.details}>{props.details}</p>
             </div>
 
-            <div >
-                <span className={styles.cardPersonality}>{props.personality}</span>
+            <div className={styles.containerPersonality}>
+                {props.personality.map((cardPersonality) => (
+                    <span className={styles.cardPersonality} key={cardPersonality}>{cardPersonality}</span>
+                ))}
             </div>
 
             <div className={styles.space}>

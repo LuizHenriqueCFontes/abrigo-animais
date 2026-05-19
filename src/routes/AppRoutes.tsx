@@ -12,7 +12,6 @@ export default function AppRoutes(){
 
                 <Route path="/pet-search" element={<PetSearch />}/>
             </Route>
-
         </Routes>
     );
 }
