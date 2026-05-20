@@ -3,9 +3,15 @@ import dog from "../../assets/hero/dog-hero.png";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
 import styles from "./Hero.module.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero(){
     const [find, setFind] = useState("");
+    const navigate = useNavigate();
+
+    function handleGoToSearchPets(){
+        navigate("/pet-search");
+    }
 
     return(
         <article className={styles.heroContainer}>
@@ -21,7 +27,7 @@ export default function Hero(){
                 <form>
                     <Input className={styles.form} ariaLabel="Pesquisar abrigo ou cidade" id="find" value={find} onChange={setFind} placeholder="Pesquisar por Cidade ou Abrigo" variant="hero"/>
 
-                    <Button className={styles.form} variant="primary">Encontrar Amigo</Button>
+                    <Button onClick={handleGoToSearchPets} className={styles.form} variant="primary">Encontrar Amigo</Button>
                 </form>
             </section>
         </article>

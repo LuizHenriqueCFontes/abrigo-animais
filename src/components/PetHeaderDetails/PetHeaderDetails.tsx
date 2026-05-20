@@ -2,42 +2,49 @@ import type { LucideIcon } from "lucide-react";
 import photo from  "../../assets/petAvatar/cat/luna.png";
 import Button from "../Button/Button";
 import TagPersonality from "../TagPersonality/TagPersonality";
+import styles from "./PetHeaderDetails.module.css";
 
 interface PetHeaderDetailsProps{
-    title: string,
+    name: string,
     description: string,
     personality: string[],
-    detailsTitle: string,
-    detailsDescription: string,
-    detailsIcon: LucideIcon
+    details: {
+        title: string,
+        description: string,
+        icon: LucideIcon
+    }
 }
 
 export default function PetHeaderDetails(props: PetHeaderDetailsProps){
-    const DetailsIcon = props.detailsIcon;
+    const DetailsIcon = props.details.icon;
 
     return(
-        <article>
+        <article className={styles.cardContainer}>
             <div>
-                <img src={photo} alt={`Foto de perfil ${photo}`} />
+                <img className={styles.photo} src={photo} alt={`Foto de perfil ${photo}`} />
             </div>
 
-            <div>
-                <h1>{props.title}</h1>
-                <p>{props.description}</p>
+            <div className={`${styles.containerInformation} ${styles.space}`}>
+                <h2>{props.name}</h2>
+
+                <p className={styles.details}>{props.description}</p>
             </div>
 
             <div>
                 <TagPersonality personality={props.personality}/>
             </div>
 
-            <div>
-                <DetailsIcon />
-                <p>{props.detailsDescription}</p>
+            <div className={styles.description}>
+                <DetailsIcon className={styles.iconDescription}/>
+
+                <h3 className={styles.descriptionTitle}>{props.details.title}</h3>
+
+                <p className={styles.descriptionMessage}>{props.details.description}</p>
             </div>
 
-            <div>
+            <div className={styles.space}>
                 <Button variant="primary">
-                    {`Quero conhecer a ${props.title}`}
+                    {`Quero conhecer a ${props.name}`}
                 </Button>
 
                 <Button variant="primary">
