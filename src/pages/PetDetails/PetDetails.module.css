@@ -1,0 +1,78 @@
+:root{
+    --background-highlight-container: #fff7ed;
+    --color-health-icon: #374151;
+}
+
+.detailsContainer{
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.infoContainer{
+    padding: 10px;
+}
+
+.infoTitle{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    font-size: 0.5em;
+    color: var(--title-color);
+    margin-bottom: 16px;
+}
+
+.iconTitle{
+    align-self: center;
+    color: var(--primary-color);
+    width: 19px;
+    height: 19px;
+}
+
+.infoText{
+    font-size: 0.9em;
+    margin-bottom: 16px;
+}
+
+.highlightContainer{
+    position: relative;
+    background-color: var(--background-highlight-container);
+    color: #7c2d12;
+    line-height: 1.6;
+    font-size: 0.85em;
+    font-weight: 500;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.personalityContainer{
+    font-size: 0.85em;
+}
+
+.listContainer{
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.listIcons{
+    width: 18px;
+    height: 18px;
+}
+
+.tableList{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+}
+
+.healthIcons{
+    color: var(--color-health-icon);
+}
+
+.sectionDivider{
+    border: none;
+    border-top: 1px solid #e5e7eb; 
+    margin: 16px auto;
+    width: 95%;
+}

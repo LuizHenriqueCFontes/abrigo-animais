@@ -1,11 +1,25 @@
-.primary{
+:root{
+    --border-collor: #c4c2c2;
+    --text-collor: #1A1A1A;
+}
+
+.button{
     width: 100%;
-    background-color: var(--primary-color);
-    color: var(--contrast-primary);
     font-weight: bold;
     border: none;
     padding: 14px 20px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1em;  
+}
+
+.primary{
+    background-color: var(--primary-color);
+    color: var(--contrast-primary);
+}
+
+.secondary{
+    background-color: #ffffff;
+    border-color: 1px solid var(--border-collor);
+    color: var(--text-collor);
 }
