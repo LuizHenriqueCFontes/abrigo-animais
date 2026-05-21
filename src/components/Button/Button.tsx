@@ -5,11 +5,12 @@ interface ButtonProps{
     variant: "primary" | "secondary"
     className?: string
     onClick?: () => void
+    type?: "submit" | "reset" | "button"
 }
 
 export default function Button(props: ButtonProps){
     
     return(
-        <button onClick={props.onClick} className={`${styles[props.variant]} ${props.className ?? ""}`}> {props.children} </button>
+        <button type={props.type} onClick={props.onClick} className={`${styles.button} ${styles[props.variant]} ${props.className ?? ""}`}> {props.children} </button>
     );
 }
