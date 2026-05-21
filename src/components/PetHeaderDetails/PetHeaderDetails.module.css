@@ -38,7 +38,8 @@
 }
 
 .descriptionTitle{
-    margin-left: 30px;
+    text-align: left;
+    margin-left: 5%;
     font-size: 0.8em;
     color: var(--title-color);
 }
@@ -47,7 +48,8 @@
     color: var(--description-message);
     font-weight: bold;
     font-size: 0.7em;
-    text-align: center;
+    text-align: left;
+    margin-left: 5%;
 }
 
 .description{
@@ -69,3 +71,46 @@
     gap: 10px;
     padding: 0 20px 15px;
 }
+
+/*Config para telas maiores*/
+@media screen and (min-width: 768px) {
+    .cardContainer{
+        display: flex;
+        border-radius: 20px;
+        margin: auto;
+        padding: 24px;
+        max-width: 1170px;
+        gap: 35px;
+    }
+
+    .name{
+        font-size: 2.3em;
+    }
+
+    .details{
+        font-size: 1.1em;
+    }
+
+    .descriptionTitle{
+        margin-left: 10%;
+    }
+
+    .descriptionMessage{
+        margin-left: 10%;
+    }
+
+    .responsiveContainer{
+        width: 70%;
+        border-radius: 20px;
+        max-width: 455px;
+        max-height: 323px;
+        margin: auto;
+    }
+
+    .photo{
+        border-radius: 20px;
+        height: 410px;
+
+    }
+}
+

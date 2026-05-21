@@ -20,6 +20,6 @@
 
 .secondary{
     background-color: #ffffff;
-    border-color: 1px solid var(--border-collor);
+    border: 1px solid var(--border-collor);
     color: var(--text-collor);
 }

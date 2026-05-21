@@ -2,6 +2,7 @@ import { Heart, Search, Smile } from "lucide-react";
 import StepCard from "../StepCard/StepCard";
 import styles from "./HowItWorks.module.css";
 import Button from "../Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const stepsData = [
     {
@@ -25,6 +26,12 @@ const stepsData = [
 ]
 
 export default function HowItWorks(){
+    const navigate = useNavigate();
+
+    function handleGoToSearch(){
+        navigate("/pet-search");
+    }
+
     return(
         <section className={styles.container}>
             <div>
@@ -42,8 +49,8 @@ export default function HowItWorks(){
                 ))}
             </div>
 
-            <div>
-                <Button className={styles.findPet} variant="primary">Encontrar meu pet ideal!</Button>
+            <div className={styles.buttonContainer}>
+                <Button onClick={handleGoToSearch} className={styles.findPet} variant="primary">Encontrar meu pet ideal!</Button>
             </div>
         </section>
     );

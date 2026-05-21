@@ -2,8 +2,16 @@
     padding: 15px;
 }
 
+.input{
+    max-width: 800px;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
 .informationTitle{
-    font-size: 2.4em;
+    font-size: 2.7em;
     color: var(--title-color);
 }
 
@@ -14,10 +22,21 @@
 
 .informationDescription{
     color: var(--supporting-color);
-    font-size: 0.8em;
+    font-size: 1em;
     font-weight: 500;
 }
 
 .filterCard{
     margin: 15px 7px 10px 0;
+}
+
+/*Config para telas maiores*/
+@media screen and(min-width: 768px) {
+    .informationTitle{
+        font-size: 2.6em;
+    }
+
+    .informationDescription{
+        font-size: 1.2em;
+    }
 }
