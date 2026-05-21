@@ -1,5 +1,6 @@
 .logo{
-    aspect-ratio: 3 / 2;
-    width: 35%;
+    width: 40%;
+    max-width: 220px;
+    max-height: 90px;
     
 }

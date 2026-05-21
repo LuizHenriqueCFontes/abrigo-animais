@@ -44,7 +44,7 @@ export default function PetSearch(){
                 <p className={styles.informationDescription}>Encontre quem espera por você.</p>
             </div>
 
-            <Input id="find-pet" variant="hero" ariaLabel="find-pet" placeholder="Busque por nome, porte ou personalidade..." value={findPet} onChange={setFindPet}/>
+            <Input id="find-pet" className={styles.input} variant="hero" ariaLabel="find-pet" placeholder="Busque por nome, porte ou personalidade..." value={findPet} onChange={setFindPet}/>
 
             {filterCardData.map((cardFilter) => (
                 <FilterCard 

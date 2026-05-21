@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
 import TagPersonality from "../TagPersonality/TagPersonality";
 import styles from "./PetCard.module.css";
@@ -10,6 +11,12 @@ interface PetCardProps{
 }
 
 export default function PetCard(props: PetCardProps){
+    const navigate = useNavigate();
+
+    function handleGoToPetDetails(){
+        navigate("/pet-details");
+    }
+
     return(
         <article className={styles.cardContainer}>
             <div className={styles.photo}>
@@ -24,8 +31,8 @@ export default function PetCard(props: PetCardProps){
 
             <TagPersonality personality={props.personality}/>
 
-            <div className={styles.space}>
-                <Button variant="primary">
+            <div className={`${styles.space}`}>
+                <Button onClick={handleGoToPetDetails} className={styles.button} variant="primary">
                     Quero adotar
                 </Button>
             </div>

@@ -24,13 +24,14 @@
 
 .dog{
     aspect-ratio: 1 / 1;
-    width: 70%;
+    width: 60%;
     display: block;
     margin: 15px auto;
+    max-width: 350px;
 }
 
 .form{
-    width: 80%;
+    width: 100%;
     display: block;
     margin: auto;
     margin-bottom: 18px;
@@ -38,4 +39,66 @@
     font-weight: bold;
 }
 
+.formContainer{
+    padding: 10px;
+}
 
+/*Config para telas maiores*/
+@media screen and (min-width: 768px) {
+    .heroContainer{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .titles{
+        width: 70%;
+    }
+
+    .containerInformation{
+        display: block;
+        margin: auto 0 auto auto;
+        padding: 10px;
+        width: 100%;
+        max-width: 770px;
+    }
+
+    .dog{
+        margin: 15px auto 20px 0;
+    }
+
+    .heroTitle{
+        font-size: 2em;
+        text-align: left;
+    }
+
+    .heroDescription{
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
+
+    .formContainer{
+        position: relative;
+        max-width: 500px;
+        text-align: left;
+        padding: 0;
+    }
+
+    .formInput{
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        padding-left: 8px;
+        font-size: 0.85em;
+        font-weight: bold;
+    }
+
+    .formButton{
+        font-size: 0.8em;
+        width: 40%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 60%;
+    }
+}

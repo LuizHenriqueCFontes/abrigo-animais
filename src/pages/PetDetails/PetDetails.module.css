@@ -1,11 +1,12 @@
 :root{
     --background-highlight-container: #fff7ed;
     --color-health-icon: #374151;
+    --background-page-alternative: #F6F5F4;
 }
 
 .detailsContainer{
     background-color: #ffffff;
-    border-radius: 20px;
+    padding: 20px;
 }
 
 .infoContainer{
@@ -34,7 +35,6 @@
 }
 
 .highlightContainer{
-    position: relative;
     background-color: var(--background-highlight-container);
     color: #7c2d12;
     line-height: 1.6;
@@ -42,6 +42,8 @@
     font-weight: 500;
     padding: 20px;
     border-radius: 16px;
+    max-width: 465px;
+    max-height: 90px;
 }
 
 .personalityContainer{
@@ -75,4 +77,50 @@
     border-top: 1px solid #e5e7eb; 
     margin: 16px auto;
     width: 95%;
+}
+
+/*Config para telas maiores*/
+@media screen and (min-width: 768px) {
+    .detailsContainer{
+        background-color: var(--background-page-alternative);
+    }
+
+    .sectionDivider{
+        display: none;
+    }
+
+    .infoContainer{
+        background-color: #ffffff;
+        border-radius: 20px;
+        padding: 32px;
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .containerResponsive{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(6, 1fr);
+        align-items: stretch;
+        max-width: 1200px;
+        margin: auto;
+        gap: 24px;
+        padding: 15px;
+    }
+
+    .history{
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .bigCard{
+        grid-column: span 3;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .smallCard{
+        grid-row: 2 / 2;
+        grid-column: span 2;
+    }
 }

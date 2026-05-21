@@ -93,112 +93,105 @@ export default function PetDetails(){
 
     return(
         <section className={styles.detailsContainer}>
-            <PetHeaderDetails {...petData.headerDetails}/>
+            <PetHeaderDetails classname={styles.petHeader} {...petData.headerDetails}/>
 
-            <section className={styles.infoContainer}>
+            
+            <div className={styles.containerResponsive}>
+                <section className={`${styles.infoContainer} ${styles.bigCard} ${styles.history}`}>
+                    <div className={styles.infoTitle}>
+                        <Heart className={styles.iconTitle}/>
+                        <h1>{petData.history.historyTitle}</h1>
+                    </div>
+                    <p className={styles.infoText}>{petData.history.description}</p>
+                    <blockquote className={styles.highlightContainer}>
+                        {petData.history.highlight}
+                    </blockquote>
+                </section>
 
-                <div className={styles.infoTitle}>
+                <hr className={styles.sectionDivider}/>
 
-                    <Heart className={styles.iconTitle}/>
-                    <h1>{petData.history.historyTitle}</h1>
+                <section className={`${styles.infoContainer} ${styles.bigCard}`}>
+                    <div className={styles.infoTitle}>
+                        <PawPrint className={styles.iconTitle}/>
+                        <h1>{petData.personality.personalityTitle.title}</h1>
+                    </div>
 
-                </div>
+                    <div>
+                        <ul className={styles.personalityContainer}>
+                            {petData.personality.tags.map((personality) => {
+                                //as keyof typeof iconpagemap, significa eu aceitar valores de icon somente que sao chaves que estao dentro do meu iconPageMap
+                                const TagIcon = iconPageMap[personality.icon as keyof typeof iconPageMap];
+                                return(
+                                    <li className={styles.listContainer} key={personality.id}>
+                                        {TagIcon && <TagIcon className={styles.listIcons}/>}
+                                        {personality.text}
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </div>
+                </section>
+                
+                <hr className={styles.sectionDivider}/>
 
-                <p className={styles.infoText}>{petData.history.description}</p>
-
-                <blockquote className={styles.highlightContainer}>
-                    {petData.history.highlight}
-                </blockquote>
-            </section>
-
-            <hr className={styles.sectionDivider}/>
-
-            <section className={styles.infoContainer}>
-                <div className={styles.infoTitle}>
-                    <PawPrint className={styles.iconTitle}/>
-                    <h1>{petData.personality.personalityTitle.title}</h1>
-                </div>
-
-                <div>
-                    <ul className={styles.personalityContainer}>
-                        {petData.personality.tags.map((personality) => {
-                            //as keyof typeof iconpagemap, significa eu aceitar valores de icon somente que sao chaves que estao dentro do meu iconPageMap
-                            const TagIcon = iconPageMap[personality.icon as keyof typeof iconPageMap];
-
-                            return(
-                                <li className={styles.listContainer} key={personality.id}>
-                                    {TagIcon && <TagIcon className={styles.listIcons}/>}
-                                    {personality.text}
+                <section className={`${styles.infoContainer} ${styles.smallCard}`}>
+                    <div className={styles.infoTitle}>
+                        <Briefcase className={styles.iconTitle}/>
+                        <h1>{petData.informations.informationsTitle.title}</h1>
+                    </div>
+                    <div>
+                        <ul>
+                            {petData.informations.tags.map((tag) => (
+                                <li className={styles.tableList} key={tag.id}>
+                                    <span>{tag.label}</span>
+                                    <span>{tag.value}</span>
                                 </li>
-                            );
-                        })} 
-                    </ul>
-                </div>
-            </section>
+                            ))}
+                        </ul>
+                    </div>
+                </section>
 
-            <hr className={styles.sectionDivider}/>
+                <hr className={styles.sectionDivider}/>
 
-            <section className={styles.infoContainer}>
-                <div className={styles.infoTitle}>
-                    <Briefcase className={styles.iconTitle}/>
-                    <h1>{petData.informations.informationsTitle.title}</h1>
-                </div>
-
-                <div>
-                    <ul>
-                        {petData.informations.tags.map((tag) => (
-                            <li className={styles.tableList} key={tag.id}>
-                                <span>{tag.label}</span>
-                                <span>{tag.value}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </section>
-
-            <hr className={styles.sectionDivider}/>
-
-            <section className={styles.infoContainer}>
-                <div className={styles.infoTitle}>
-                    <ShieldCheck className={styles.iconTitle}/>
-                    <h1>{petData.health.healthTitle.title}</h1>
-                </div>
-
-                <div>
-                    <ul className={styles.personalityContainer}>
-                        {petData.health.tags.map((tag) => (
-                            <li className={styles.listContainer} key={tag.id}>
-                                <CircleCheck className={`${styles.listIcons} ${styles.healthIcons}`}/>
-                                {tag.text}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </section>
-
-            <hr className={styles.sectionDivider}/>      
-                    
-            <section className={styles.infoContainer}>
-                <div className={styles.infoTitle}>
-                    <House className={styles.iconTitle}/>
-                    <h1>{petData.condition.conditionTitle.title}</h1>
-                </div>
-
-                <div>
-                    <ul className={styles.personalityContainer}>
-                        {petData.condition.tags.map((tag) => {
-                            const TagIcon = iconPageMap[tag.icon as keyof typeof iconPageMap];
-
-                            return(
+                <section className={`${styles.infoContainer} ${styles.smallCard}`}>
+                    <div className={styles.infoTitle}>
+                        <ShieldCheck className={styles.iconTitle}/>
+                        <h1>{petData.health.healthTitle.title}</h1>
+                    </div>
+                    <div>
+                        <ul className={styles.personalityContainer}>
+                            {petData.health.tags.map((tag) => (
                                 <li className={styles.listContainer} key={tag.id}>
-                                    {TagIcon && <TagIcon className={styles.listIcons}/>}
+                                    <CircleCheck className={`${styles.listIcons} ${styles.healthIcons}`}/>
                                     {tag.text}
                                 </li>
-                            );
-                        })}
-                    </ul>
-                </div>
-            </section>
+                            ))}
+                        </ul>
+                    </div>
+                </section>
+
+                <hr className={styles.sectionDivider}/>
+                
+                <section className={`${styles.infoContainer} ${styles.smallCard}`}>
+                    <div className={styles.infoTitle}>
+                        <House className={styles.iconTitle}/>
+                        <h1>{petData.condition.conditionTitle.title}</h1>
+                    </div>
+                    <div>
+                        <ul className={styles.personalityContainer}>
+                            {petData.condition.tags.map((tag) => {
+                                const TagIcon = iconPageMap[tag.icon as keyof typeof iconPageMap];
+                                return(
+                                    <li className={styles.listContainer} key={tag.id}>
+                                        {TagIcon && <TagIcon className={styles.listIcons}/>}
+                                        {tag.text}
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </div>
+                </section>
+            </div>
         </section>  
     );
 }
