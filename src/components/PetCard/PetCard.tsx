@@ -7,7 +7,8 @@ interface PetCardProps{
     photo: string,
     title: string,
     details: string,
-    personality: string[]
+    personality: string[],
+    className?: string
 }
 
 export default function PetCard(props: PetCardProps){
@@ -18,7 +19,7 @@ export default function PetCard(props: PetCardProps){
     }
 
     return(
-        <article className={styles.cardContainer}>
+        <article className={`${styles.cardContainer} ${props.className ?? ""}`}>
             <div className={styles.photo}>
                 <img className={styles.photo} src={props.photo} alt={`Imagem do ${props.title}`} />
             </div>

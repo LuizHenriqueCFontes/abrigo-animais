@@ -2,6 +2,10 @@
     padding: 15px;
 }
 
+.petCard{
+    margin: auto;
+}
+
 .input{
     max-width: 800px;
     display: block;
@@ -26,6 +30,13 @@
     font-weight: 500;
 }
 
+.filterCardContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
 .filterCard{
     margin: 15px 7px 10px 0;
 }
@@ -38,5 +49,9 @@
 
     .informationDescription{
         font-size: 1.2em;
+    }
+
+    .petCard{
+        margin: 0;
     }
 }
