@@ -2,17 +2,134 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
+    padding: 15px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.301);
+    position: relative  ;
 }
 
 .button{
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .icon{
     color: var(--supporting-color);
-    font-size: 2em;
-    padding-right: 10px;
+    width: 33px;
+    height: 33px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.4);
+
+    z-index: 1000;
+
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 280px;
+    
+
+    background-color: #fff;
+    height: auto;
+
+    border-radius: 10px;
+
+    padding: 24px;
+
+    box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+
+    z-index: 1100;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.open {
+    transform: translateX(0);
+}
+
+.mobileMenu li{
+    list-style: none;
+    font-size: 1.5em;
+}
+
+.mobileMenu a {
+    text-decoration: none;
+    color: #333;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    padding: 10px 8px;
+    border-radius: 8px;
+
+    transition: background 0.2s;
+}
+
+.mobileMenu a:hover {
+    background-color: #f2f2f2;
+}
+
+/*Config para telas maiores*/
+@media screen and (min-width: 1024px) {
+    .button{
+        display: none;
+    }
+
+    .overlay{
+        display: none;
+    }
+
+    .mobileMenu {
+        display: flex; 
+        position: relative;      
+        flex-direction: row;      
+        align-items: center;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+        transform: translateX(0);
+    }
+
+  .mobileMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .mobileMenu a {
+    text-decoration: none;
+    color: #334155;
+    font-weight: 500;
+    transition: color 0.2s;
+    font-size: 0.6em;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  adopt{
+    font-size: 0.3em;
+    background-color: red;
+  }
+
+
 }

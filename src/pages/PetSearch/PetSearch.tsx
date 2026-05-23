@@ -46,19 +46,22 @@ export default function PetSearch(){
 
             <Input id="find-pet" className={styles.input} variant="hero" ariaLabel="find-pet" placeholder="Busque por nome, porte ou personalidade..." value={findPet} onChange={setFindPet}/>
 
-            {filterCardData.map((cardFilter) => (
-                <FilterCard 
-                    key={cardFilter.id}
-                    icon={cardFilter.icon}
-                    value={cardFilter.value}
-                    className={styles.filterCard}
-                />
-            ))}
+            <div className={styles.filterCardContainer}>
+                {filterCardData.map((cardFilter) => (
+                    <FilterCard
+                        key={cardFilter.id}
+                        icon={cardFilter.icon}
+                        value={cardFilter.value}
+                        className={styles.filterCard}
+                    />
+                ))}
+            </div>
 
            
             {petCardData.map((pet) => (
                 <PetCard 
                     key={pet.id}
+                    className={styles.petCard}
                     photo={pet.photo}
                     title={pet.title}
                     details={pet.details}
