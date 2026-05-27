@@ -1,75 +1,113 @@
-# React + TypeScript + Vite
+# 🐾 Abrigo Animais
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação web desenvolvida para divulgação e apoio a um abrigo de animais, com foco em conscientização, doações e incentivo à adoção responsável.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Deploy
 
-## React Compiler
+Acesse o projeto online:
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+🔗 https://luizhenriquecfontes.github.io/abrigo-animais/
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## ✨ Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Página institucional moderna
+- Layout responsivo
+- Sessão de doações
+- Informações sobre o abrigo
+- Interface amigável
+- Navegação fluida
+- Estrutura organizada em componentes
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠 Tecnologias utilizadas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- React
+- Vite
+- TypeScript
+- CSS
+- GitHub Pages
+- GitHub Actions
+
+---
+
+## ⚙️ Como executar localmente
+
+Clone o projeto:
+
+```bash
+git clone https://github.com/luizhenriquecfontes/abrigo-animais.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Entre na pasta do projeto:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cd abrigo-animais
 ```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute o projeto:
+
+```bash
+npm run dev
+```
+
+---
+
+## 🚀 Deploy automatizado
+
+O deploy da aplicação é realizado utilizando:
+
+- GitHub Actions
+- GitHub Pages
+
+Com pipeline automatizada via:
+
+```txt
+.github/workflows/deploy.yml
+```
+
+---
+
+## 📚 Aprendizados
+
+Durante o desenvolvimento deste projeto, foram praticados conceitos como:
+
+- Componentização no React
+- Estruturação de páginas responsivas
+- CI/CD com GitHub Actions
+- Deploy automatizado
+- Organização de projeto frontend
+- Publicação com GitHub Pages
+
+---
+
+## ⚠️ Status do projeto
+
+Algumas funcionalidades e links presentes na interface foram adicionados apenas para fins visuais e ainda não possuem implementação completa.
+
+Melhorias futuras incluem:
+
+- Integração com backend
+- Formulários funcionais
+- Sistema de adoção
+- Área administrativa
+- Persistência de dados
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por Luiz Henrique.
+
+GitHub:
+https://github.com/luizhenriquecfontes
